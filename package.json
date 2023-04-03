@@ -1,0 +1,35 @@
+{
+  "name": "postcss-combininator",
+  "version": "1.0.0",
+  "description": "Combines multiple blocks of custom properties",
+  "license": "Apache-2.0",
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "contributors": [
+    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castastrophe/postcss-combininator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/castastrophe/postcss-combinator/issues"
+  },
+  "main": "index.js",
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.21"
+  },
+  "keywords": [
+    "combinator",
+    "css",
+    "custom",
+    "plugin",
+    "postcss",
+    "properties"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
