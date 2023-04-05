@@ -31,3 +31,15 @@ function readFile(filename) {
 test('create basic output', t => {
   return compare(t, 'basic.css', 'basic.css');
 });
+
+test('preserve last selector with option `preserve=\'last\'`', t => {
+  return compare(t, 'basic.css', 'basic.css', { preserve: 'last' });
+});
+
+test('validate non custom properties are preserved', t => {
+  return compare(t, 'mixed-properties.css', 'mixed-properties.css');
+});
+
+test('preserve first selector with option `preserve=\'first\'`', t => {
+  return compare(t, 'first-preserved.css', 'first-preserved.css', { preserve: 'first' });
+});
