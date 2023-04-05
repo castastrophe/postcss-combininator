@@ -1,0 +1,11 @@
+.spectrum {
+  --spectrum-actionbutton-background-color: blue;
+  --spectrum-actionbutton-border-color: transparent;
+
+  color: var(--spectrum-actionbutton-background-color);
+  background-color: var(--spectrum-actionbutton-border-color);
+}
+
+.spectrum--express {
+  --spectrum-actionbutton-background-color: purple;
+}
