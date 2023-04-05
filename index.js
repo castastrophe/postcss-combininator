@@ -3,19 +3,18 @@ module.exports = () => {
   return {
     postcssPlugin: 'postcss-combininator',
     prepare() {
-      const rules = [];
       const declarations = {};
       return {
         Declaration(decl) {
           if (!decl.prop.startsWith('--')) return;
           declarations[decl.prop] = decl;
-          decl.remove();
         },
-        Rules(rule) {
-          rules.push(rule);
-          if (!rule.last) rule.remove();
-          else {
-            for (let decl of Object.values(declarations)) {
+        Rule(rule) {
+          if (!rule.last) {
+            if (rule.nodes.length === 0) rule.remove();
+          } else {
+            for (const [prop, decl] of Object.entries(declarations)) {
+              // if (rule.nodes.some((node) => node.prop === prop)) continue;
               rule.append(decl);
             }
           }
